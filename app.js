@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 app.get('/bixi', sse.init);
 
 app.post('/api/bixi', function (req, res) {
+	console.log(req);
 	sse.send(req.body);
 	res.send('ok');
 })
