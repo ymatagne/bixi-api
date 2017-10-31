@@ -1,0 +1,16 @@
+{
+  "name": "the-rocket-is-gone-api",
+  "version": "1.0.0",
+  "description": "Api for The web applications The rocket is gone",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "ymatagne",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-sse": "^0.4.1"
+  }
+}

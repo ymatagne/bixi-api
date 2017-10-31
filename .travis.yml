@@ -1,0 +1,13 @@
+sudo: required
+
+language: node_js
+node_js:
+  - "7"
+services:
+  - docker
+script:
+  - npm install
+after_success:
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - docker build -t ymatagne/bixi-api .
+  - docker push ymatagne/bixi-api
